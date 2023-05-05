@@ -1,0 +1,23 @@
+.user-profile {
+    @apply absolute bottom-0 flex w-[250px] px-3 py-[15px] justify-between transition-all duration-500;
+
+    .user-container {
+        @apply flex items-center cursor-pointer;
+
+        img { @apply h-[32px] w-[32px] rounded-full; }
+
+        p { @apply font-bold ml-2 text-[14px]; }
+    }
+
+    .toggle-container {
+        @apply p-2 py-1 bg-gray-100 rounded-full;
+        fa-icon { @apply text-xl; }
+    }
+
+    &.toggle-off {
+        @apply w-[60px] flex-col items-center justify-center transition-all duration-500;
+        .toggle-container {
+            @apply mt-2;
+        }
+    }
+}

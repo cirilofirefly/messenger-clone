@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPage } from 'src/app/core/models/page.model';
+import { ToggleService } from 'src/app/core/services/toggle.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,8 +11,13 @@ export class SidebarComponent implements OnInit {
 
     @Input() pages: IPage[] = [];
 
-    constructor() {
-        console.log(this.pages)
+    isToggle: boolean = true;
+
+    constructor(private toggleService: ToggleService) {
+        this.toggleService.getSidebarToggleState().subscribe((state) => {
+            console.log(state)
+            this.isToggle = state
+        })
     }
 
     ngOnInit(): void {}

@@ -1,0 +1,9 @@
+<div class="user-profile" [class]="{ 'toggle-off' : !isToggle}">
+    <div class="user-container">
+        <img src="https://scontent.fmnl25-3.fna.fbcdn.net/v/t39.30808-1/322190337_896483968050324_3316010229086617587_n.jpg?stp=dst-jpg_p100x100&_nc_cat=103&ccb=1-7&_nc_sid=f67be1&_nc_eui2=AeF_uepCFauEAShyGMPy_XHNg-mHTJjLs1uD6YdMmMuzW9cISxCjTtBhztEbEABlUQ5kwzWAjLW3Lh_caT2zKq9c&_nc_ohc=nXTHpinZm_UAX_oNl6N&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fmnl25-3.fna&oh=00_AfCqy6uW_ApX_sy6hDy2KvLYK3zu11FRbg-l3srT_DLtug&oe=64585F26" alt="">
+        <p *ngIf="isToggle">Cirilo</p>
+    </div>
+    <div class="toggle-container" (click)="toggleSidebar()" role="button">
+        <fa-icon [icon]="isToggle ? faToggleOn : faToggleOff"></fa-icon>
+    </div>
+</div>

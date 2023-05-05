@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faUserFriends, faStore, faCommentDots, faArchive } from '@fortawesome/free-solid-svg-icons';
 import { IPage } from 'src/app/core/models/page.model';
+import { ToggleService } from 'src/app/core/services/toggle.service';
 
 @Component({
   selector: 'app-home',
@@ -9,19 +10,41 @@ import { IPage } from 'src/app/core/models/page.model';
 })
 export class HomeComponent implements OnInit {
     
+    isToggle: boolean = true;
+
     pages: IPage[] = [
         { 
             icon: faComment,
-            path: 'chats', 
+            path: '/t', 
             title: 'Chats'
-        }
+        },
+        { 
+            icon: faUserFriends,
+            path: '/active', 
+            title: 'People'
+        },
+        { 
+            icon: faStore,
+            path: '/marketplace', 
+            title: 'Markerplace'
+        },
+        { 
+            icon: faCommentDots,
+            path: '/requests', 
+            title: 'Requests'
+        },
+        { 
+            icon: faArchive,
+            path: '/archived', 
+            title: 'Archive'
+        },
     ];
 
-    constructor() {
-
+    constructor(private toggleService: ToggleService) {
+        this.toggleService.getSidebarToggleState().subscribe((state) => {
+            this.isToggle = state;
+        })
     }
 
-    ngOnInit(): void {
-        
-    }
+    ngOnInit(): void {}
 }

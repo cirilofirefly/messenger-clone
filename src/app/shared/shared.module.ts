@@ -4,10 +4,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedRoutingModule } from './shared-routing.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    UserProfileComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule
   ],
   exports: [
-    SidebarComponent
+    SidebarComponent,
+    UserProfileComponent
   ]
 })
 export class SharedModule { }

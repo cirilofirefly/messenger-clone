@@ -1,0 +1,11 @@
+.home-container {
+    @apply flex;
+}
+
+.side-container {
+    @apply flex flex-col w-[250px] h-screen border-e;
+
+    &.toggle-off {
+        @apply w-[60px];
+    }
+}

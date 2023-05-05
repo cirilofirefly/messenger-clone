@@ -1,12 +1,6 @@
 @import "abstracts/variables";
+@import "layouts";
 
 body {
     font-family: $font-segoe-ui-historic, Segoe UI, Helvetica, Arial, sans-serif;
-}
-
-@layer components {
-    .btn {
-        @apply w-[200px] bg-blue-500 py-[20px];
-        font-weight: 600;
-    }
 }
