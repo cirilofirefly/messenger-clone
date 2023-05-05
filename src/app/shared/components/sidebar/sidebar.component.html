@@ -1,0 +1,5 @@
+<ul class="sidebar">
+    <li class="item" *ngFor="let page of pages" [routerLink]="page.path">
+        {{ page.title }} <fa-icon [icon]="page.icon"></fa-icon>
+    </li>
+</ul>

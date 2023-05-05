@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home.component';
+import { PeopleComponent } from './pages/people/people.component';
+import { ChatsComponent } from './pages/chats/chats.component';
+import { MarketplaceComponent } from './pages/marketplace/marketplace.component';
 
 const routes: Routes = [
     {
-        path: '',
-        component: HomeComponent
+        path: 't',
+        component: ChatsComponent
     },
-    // {
-    //     path: 't',
-    // }
+    {
+        path: 'active',
+        component: PeopleComponent   
+    },
+    {
+        path: 'markeplace',
+        component: MarketplaceComponent   
+    },
+    { path: '',   redirectTo: '/t', pathMatch: 'full' }
 ];
 
 @NgModule({
