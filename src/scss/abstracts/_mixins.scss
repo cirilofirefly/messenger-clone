@@ -1,0 +1,7 @@
+@mixin font-face($family, $path, $type) {
+    @font-face {
+        font-family: $family;
+        src: url('../../assets/fonts/#{$path}') format('#{$type}');
+        font-display: auto;
+    }
+}
