@@ -8,8 +8,8 @@ import { Observable, Subject } from 'rxjs';
 export class ToggleService {
 
     private sidebarToggleSubject = new Subject<boolean>();
-
-    constructor() { }
+    
+    constructor() {}
 
     setSidebarToggleState(state: boolean) {
         this.sidebarToggleSubject.next(state);

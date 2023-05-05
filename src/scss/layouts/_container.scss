@@ -3,9 +3,9 @@
 }
 
 .side-container {
-    @apply flex flex-col w-[250px] h-screen border-e;
+    @apply flex flex-col w-[250px] h-screen border-e transition-all duration-300;
 
     &.toggle-off {
-        @apply w-[60px];
+        @apply w-[60px] transition-all duration-300;
     }
 }

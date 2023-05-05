@@ -15,7 +15,6 @@ export class SidebarComponent implements OnInit {
 
     constructor(private toggleService: ToggleService) {
         this.toggleService.getSidebarToggleState().subscribe((state) => {
-            console.log(state)
             this.isToggle = state
         })
     }

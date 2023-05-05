@@ -1,0 +1,36 @@
+.header-container {
+    @apply my-[20px];
+
+    .line {
+        @apply border-b-gray-200 border-b-2 mx-2;
+    }
+
+    .header {
+        @apply flex justify-between items-center mx-4;
+        .title {
+            @apply font-bold text-[14px];
+        }
+
+        .manage {
+            @apply font-bold hover:bg-gray-100 px-2 py-1 rounded text-[12px] text-blue-700;
+        }
+    }
+}
+
+.communities-container {
+    @apply flex flex-col items-center overflow-y-auto overflow-x-hidden h-[400px];
+
+    .community-item{
+        @apply flex items-center my-2 px-4 py-2 text-ellipsis w-[240px] hover:bg-gray-100 rounded cursor-pointer;
+
+        img { @apply rounded; }
+
+        p {
+            @apply ml-2 text-[14px] font-semibold text-ellipsis whitespace-nowrap overflow-hidden;
+        }
+
+        &.toggle-off {
+            @apply w-[60px];
+        }
+    }
+}

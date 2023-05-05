@@ -1,6 +1,6 @@
 <ul class="sidebar" [class]="{ 'toggle-off' : !isToggle }">
     <li class="item" *ngFor="let page of pages" [routerLink]="page.path" routerLinkActive="active" role="button">
         <fa-icon class="icon" [icon]="page.icon"></fa-icon> 
-        <p class="title" [hidden]="!isToggle"> {{ page.title }} </p>
+        <p class="title" *ngIf="isToggle"> {{ page.title }} </p>
     </li>
 </ul>

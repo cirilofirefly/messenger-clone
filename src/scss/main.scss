@@ -1,6 +1,21 @@
 @import "abstracts/variables";
 @import "layouts";
 
+/* width */
+::-webkit-scrollbar {
+  @apply w-[7px];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply text-slate-50;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 rounded hover:bg-gray-700;
+}
+
 body {
-    font-family: $font-segoe-ui-historic, Segoe UI, Helvetica, Arial, sans-serif;
+  font-family: $font-segoe-ui-historic, Segoe UI, Helvetica, Arial, sans-serif;
 }

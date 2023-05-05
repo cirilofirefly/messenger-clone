@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faComment, faUserFriends, faStore, faCommentDots, faArchive } from '@fortawesome/free-solid-svg-icons';
+import { ICommunity } from 'src/app/core/models/community.model';
 import { IPage } from 'src/app/core/models/page.model';
 import { ToggleService } from 'src/app/core/services/toggle.service';
 
@@ -11,6 +12,64 @@ import { ToggleService } from 'src/app/core/services/toggle.service';
 export class HomeComponent implements OnInit {
     
     isToggle: boolean = true;
+
+    communities: ICommunity[] = [
+        {
+            id: 1,
+            group_name: 'Lorem ipsum dolor sit qwewqe qweqweqweqweqw eqweqw e',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 2,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 3,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 4,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 5,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 6,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 7,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 8,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 9,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 10,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        },
+        {
+            id: 11,
+            group_name: 'Lorem ipsum dolor sit qwe',
+            group_photo: 'https://picsum.photos/28/28'
+        }
+    ]
 
     pages: IPage[] = [
         { 
@@ -26,7 +85,7 @@ export class HomeComponent implements OnInit {
         { 
             icon: faStore,
             path: '/marketplace', 
-            title: 'Markerplace'
+            title: 'Marketplace'
         },
         { 
             icon: faCommentDots,
@@ -46,5 +105,12 @@ export class HomeComponent implements OnInit {
         })
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.getCommunities();
+    }
+
+
+    getCommunities() {
+        
+    }
 }

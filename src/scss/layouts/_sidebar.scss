@@ -1,11 +1,11 @@
 .sidebar {
-    @apply cursor-pointer text-[14px] pt-[10px] flex flex-col items-center;
+    @apply relative cursor-pointer text-[14px] pt-[10px] flex flex-col items-center;
 
     .item {
-        @apply flex items-center w-[95%] py-2 px-2 my-[3px] hover:bg-gray-100 hover:rounded-[5px] transition-all duration-500;
+        @apply relative flex items-center w-[95%] py-2 px-2 my-[3px] hover:bg-gray-100 hover:rounded-[5px] transition-all duration-500;
 
         .icon { @apply ml-[5px] mr-[10px] text-[18px] text-gray-500; }
-        .title { @apply font-bold; }
+        .title { @apply font-bold transition-all duration-500; }
 
         &.active {
             @apply bg-gray-100 px-2 rounded-[5px] transition-all duration-500 text-center;
@@ -17,6 +17,9 @@
     &.toggle-off {
         .item {
             @apply p-2 text-center flex items-center justify-center;
+            .title {
+                @apply transition-all duration-500;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 <div class="home-container">
     <div class="side-container" [class]="{ 'toggle-off' : !isToggle }">
         <app-sidebar [pages]="pages"></app-sidebar>
-        <app-communities></app-communities>
+        <app-communities [communities]="communities"></app-communities>
         <app-user-profile></app-user-profile>
     </div>
     <router-outlet class="p-2"></router-outlet>

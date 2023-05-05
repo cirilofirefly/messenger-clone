@@ -1,1 +1,15 @@
-<p>communities works!</p>
+<div class="header-container">
+    <div class="header">
+        <p class="title" *ngIf="isToggle">Communities</p>
+        <button (click)="manageGroup()" class="manage" *ngIf="isToggle">Manage</button>
+    </div>
+    <div class="line" *ngIf="!isToggle"></div>
+</div>
+
+<div class="communities-container">
+    <div class="community-item" [class]="{ 'toggle-off' : !isToggle }" *ngFor="let community of communities">
+        <input type="checkbox" [id]="community.id" [name]="community.group_name" *ngIf="manageState">
+        <img [src]="community.group_photo" [alt]="community.group_name">
+        <p *ngIf="isToggle">{{ community.group_name }}</p>
+    </div>
+</div>
