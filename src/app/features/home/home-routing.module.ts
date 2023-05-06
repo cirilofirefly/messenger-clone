@@ -13,6 +13,10 @@ const routes: Routes = [
         component: HomeComponent,
         children: [
             {
+                path: '',
+                component: ChatsComponent   
+            },
+            {
                 path: 't',
                 component: ChatsComponent   
             },
@@ -34,7 +38,6 @@ const routes: Routes = [
             },
         ]
     },
-    
     { path: '',   redirectTo: '/t', pathMatch: 'full' }
 ];
 

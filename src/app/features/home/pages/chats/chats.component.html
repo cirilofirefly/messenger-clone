@@ -1,3 +1,18 @@
-<div class="chats">
-    test
+<div class="page-container">
+    <div class="header">
+        <h1>Chats</h1>
+        <div>
+            <button class="btn-icon mr-2">
+                <fa-icon [icon]="faVideo"></fa-icon>
+            </button>
+            <button class="btn-icon">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <app-search 
+        [styleOptions]="'mt-4'" 
+        [placeholder]="'Search Messenger'"
+        (onSearchInputted)="searchOnThread($event)"
+    ></app-search>
 </div>

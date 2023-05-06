@@ -18,10 +18,10 @@
 }
 
 .communities-container {
-    @apply flex flex-col items-center overflow-y-auto overflow-x-hidden h-[400px];
+    @apply relative flex flex-col items-center overflow-y-auto overflow-x-hidden h-[400px];
 
     .community-item{
-        @apply flex items-center my-2 px-4 py-2 text-ellipsis w-[240px] hover:bg-gray-100 rounded cursor-pointer;
+        @apply relative flex items-center my-2 px-4 py-2 text-ellipsis w-[240px] hover:bg-gray-100 rounded cursor-pointer;
 
         img { @apply rounded; }
 
@@ -29,8 +29,11 @@
             @apply ml-2 text-[14px] font-semibold text-ellipsis whitespace-nowrap overflow-hidden;
         }
 
-        &.toggle-off {
-            @apply w-[60px];
-        }
+        &.toggle-off { @apply w-[60px]; }
     }
+}
+
+
+.tooltip-options {
+    @apply absolute w-[300px] right-[-250px] scale-0 transition-all duration-500;
 }

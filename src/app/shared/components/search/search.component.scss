@@ -1,0 +1,7 @@
+.search {
+    @apply w-full rounded-[20px] bg-gray-50 p-2 text-[14px];
+
+    &:is(:focus-visible, :focus, :active) {
+        @apply border-none outline-none;
+    }
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPage } from 'src/app/core/models/page.model';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
+import { faVideo, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chats',
@@ -9,7 +8,14 @@ import { faComment } from '@fortawesome/free-solid-svg-icons';
 })
 export class ChatsComponent implements OnInit {
 
+    faVideo = faVideo;
+    faPlus = faPlus;
+
     constructor() {}
 
     ngOnInit(): void {}
+
+    searchOnThread(searchInput: string) {
+        console.log(searchInput)
+    }
 }

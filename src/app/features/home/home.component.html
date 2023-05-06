@@ -4,5 +4,10 @@
         <app-communities [communities]="communities"></app-communities>
         <app-user-profile></app-user-profile>
     </div>
-    <router-outlet class="p-2"></router-outlet>
+    <router-outlet></router-outlet>
+    <div class="thread-container">
+        <app-thread *ngIf="hasThread"></app-thread>
+        <app-thread-profile *ngIf="hasThread"></app-thread-profile>
+        <h1 *ngIf="!hasThread" class="start-text">Select a chat or start a new conversation</h1>
+    </div>
 </div>

@@ -12,6 +12,7 @@ import { ToggleService } from 'src/app/core/services/toggle.service';
 export class HomeComponent implements OnInit {
     
     isToggle: boolean = true;
+    hasThread: boolean = false;
 
     communities: ICommunity[] = [
         {

@@ -1,0 +1,7 @@
+.header {
+    @apply flex items-center justify-between;
+}
+
+.btn-icon {
+    @apply w-[35px] h-[35px] rounded-full bg-gray-200;
+}

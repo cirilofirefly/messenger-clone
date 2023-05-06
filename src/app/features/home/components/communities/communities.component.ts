@@ -24,5 +24,15 @@ export class CommunitiesComponent {
 
     manageGroup() {
         this.manageState = !this.manageState
+        this.communities = this.communities.map((community) => {
+            return {
+                ...community,
+                checked: this.manageState
+            }
+        })
+    }
+
+    toggleCheckBox(index: number) {
+        this.communities[index].checked = !this.communities[index].checked
     }
 }

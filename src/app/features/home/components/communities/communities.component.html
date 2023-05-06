@@ -7,9 +7,23 @@
 </div>
 
 <div class="communities-container">
-    <div class="community-item" [class]="{ 'toggle-off' : !isToggle }" *ngFor="let community of communities">
-        <input type="checkbox" [id]="community.id" [name]="community.group_name" *ngIf="manageState">
+    <div 
+        class="community-item group" 
+        [class]="{ 'toggle-off' : !isToggle }" 
+        *ngFor="let community of communities; let i = index;"
+        (click)="manageState ? toggleCheckBox(i) : true"
+    >
+        <input 
+            class="checkbox mr-3" 
+            [class]="{ 'w-100px' : manageState }"
+            [checked]="community?.checked"
+            type="checkbox" 
+            [id]="community.id" 
+            [name]="community.group_name" 
+            *ngIf="manageState"
+        >
         <img [src]="community.group_photo" [alt]="community.group_name">
         <p *ngIf="isToggle">{{ community.group_name }}</p>
+        <!-- <app-tooltip class="tooltip-options group-hover:scale-100" [tooltip]="community.group_name"></app-tooltip> -->
     </div>
 </div>

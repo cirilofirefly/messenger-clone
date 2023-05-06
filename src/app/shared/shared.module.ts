@@ -6,12 +6,18 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { ThreadComponent } from './components/thread/thread.component';
+import { ThreadProfileComponent } from './components/thread-profile/thread-profile.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
     UserProfileComponent,
-    TooltipComponent
+    TooltipComponent,
+    ThreadComponent,
+    ThreadProfileComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -20,8 +26,13 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
     FontAwesomeModule
   ],
   exports: [
+    FontAwesomeModule,
+    SearchComponent,
     SidebarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    TooltipComponent,
+    ThreadComponent,
+    ThreadProfileComponent,
   ]
 })
 export class SharedModule { }
