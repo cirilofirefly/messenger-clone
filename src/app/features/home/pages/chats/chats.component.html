@@ -14,5 +14,10 @@
         [styleOptions]="'mt-4'" 
         [placeholder]="'Search Messenger'"
         (onSearchInputted)="searchOnThread($event)"
-    ></app-search>
+    >
+    </app-search>
+    <div class="search-result" *ngIf="searchInput">
+        <fa-icon [icon]="faSearch"></fa-icon>
+        <p>Search messages for "{{ searchInput }}"</p>
+    </div>
 </div>

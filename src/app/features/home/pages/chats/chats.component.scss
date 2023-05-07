@@ -5,3 +5,10 @@
 .btn-icon {
     @apply w-[35px] h-[35px] rounded-full bg-gray-200;
 }
+
+.search-result {
+    @apply mt-4 flex items-center text-[14px];
+    fa-icon {
+        @apply text-[20px] mr-2;
+    }
+}

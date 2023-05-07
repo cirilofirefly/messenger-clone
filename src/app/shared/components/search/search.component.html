@@ -1,9 +1,14 @@
-<input 
-    type="text" 
-    name="search" 
-    id="search" 
-    class="search" 
-    [placeholder]="placeholder"
-    [class]="styleOptions" 
-    (keyup)="onKeyPress($event)" 
->
+<label for="search" class="relative block">
+    <span class="search-icon">
+        <fa-icon class="text-gray-400" [icon]="faSearch"></fa-icon>
+    </span>
+    <input 
+        type="text" 
+        name="search" 
+        id="search" 
+        class="search" 
+        [placeholder]="placeholder"
+        [class]="styleOptions" 
+        (keyup)="onKeyPress($event)" 
+    >
+</label>
