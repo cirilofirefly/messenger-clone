@@ -2,12 +2,8 @@
     <div class="header">
         <h1>Chats</h1>
         <div>
-            <button class="btn-icon mr-2">
-                <fa-icon [icon]="faVideo"></fa-icon>
-            </button>
-            <button class="btn-icon">
-                <fa-icon [icon]="faPlus"></fa-icon>
-            </button>
+            <button class="btn-icon mr-2"><fa-icon [icon]="faVideo"></fa-icon></button>
+            <button class="btn-icon"><fa-icon [icon]="faPlus"></fa-icon></button>
         </div>
     </div>
     <app-search 
@@ -20,4 +16,5 @@
         <fa-icon [icon]="faSearch"></fa-icon>
         <p>Search messages for "{{ searchInput }}"</p>
     </div>
+    <app-chat-list [threads]="threads"></app-chat-list>
 </div>

@@ -9,6 +9,7 @@ import { ArchiveComponent } from './pages/archive/archive.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './home.component';
 import { CommunitiesComponent } from './components/communities/communities.component';
+import { ChatListComponent } from './components/chat-list/chat-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommunitiesComponent } from './components/communities/communities.compo
     MarketplaceComponent,
     RequestsComponent,
     ArchiveComponent,
-    CommunitiesComponent
+    CommunitiesComponent,
+    ChatListComponent
   ],
   imports: [
     CommonModule,

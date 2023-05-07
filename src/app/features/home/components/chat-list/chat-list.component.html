@@ -1,0 +1,12 @@
+<div class="chat-list-container">
+    <div class="chat-list-item group" *ngFor="let thread of threads" [routerLink]="['/t/' + thread.id]" routerLinkActive="active">
+        <img [src]="getThreadPhoto(thread)" [alt]="thread?.group_name ?? ''">
+        <div class="thread-content">
+            <p>{{ getThreadName(thread) }}</p>
+            <p>{{ thread.latest_message }}</p>
+        </div>
+        <button class="btn-option scale-0 group-hover:scale-100">
+            <fa-icon [icon]="faEllipsis"></fa-icon>
+        </button>
+    </div>
+</div>

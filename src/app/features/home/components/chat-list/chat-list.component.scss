@@ -1,0 +1,22 @@
+.chat-list-container {
+    @apply mt-2 flex flex-col overflow-y-auto overflow-x-hidden;
+
+    .chat-list-item {
+        @apply relative flex items-center my-1 px-1 py-2 rounded cursor-pointer hover:bg-gray-100 transition-all duration-500;
+    }
+
+    img { @apply w-[3rem] h-[3rem] rounded-full object-cover ml-1; }
+
+    .thread-content {
+        @apply ml-3 self-baseline;
+        p { @apply text-[0.8750em] font-semibold; }
+        p:nth-child(2) { @apply text-[0.7500em] text-gray-500; }
+    }
+
+    .btn-option {
+        @apply absolute right-[20px] rounded-full border bg-white shadow w-[30px] h-[30px] hover:bg-gray-100 transition-all duration-500;
+        fa-icon { @apply text-gray-500; }
+    }
+}
+
+.active { @apply bg-gray-100; }

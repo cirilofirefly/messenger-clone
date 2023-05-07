@@ -21,6 +21,10 @@ const routes: Routes = [
                 component: ChatsComponent   
             },
             {
+                path: 't/:threadId',
+                component: ChatsComponent   
+            },
+            {
                 path: 'active',
                 component: PeopleComponent   
             },
